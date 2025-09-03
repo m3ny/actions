@@ -9,5 +9,4 @@ jobs:
   job2:
     runs-on: ubutnu-latest
     steps:
-      - echo "hello from job2"
-      
+      - run: echo "hello from job2"
