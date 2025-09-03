@@ -2,11 +2,16 @@ name: Matrix
 
 on:
   push:
-    branhces:
+    branches:
       - main
 
 jobs:
-  matrix:
-    runs-on:ubuntu-latest
+  test-parallel:
+    runs-on: ${{matrix.os}}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
-      - run: echo "hello world"
+      - run: echo "${{ toJson(matrix) }}"
+      - run: echo "${{matrix.os}}"
