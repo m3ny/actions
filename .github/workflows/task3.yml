@@ -1,0 +1,13 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "name for the job"
+        required: true
+        default: "World"
+
+jobs:
+  job1:
+    uses: ./github/workflows/task3reuseable.yml
+  with:
+    name: ${{outputs.name}}
