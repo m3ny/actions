@@ -6,7 +6,7 @@ on:
       example_input:
         description: 'An example input'
         required: true
-        default: 'Hello'
+        default: 'Hello context'
 
 jobs:
   context:
