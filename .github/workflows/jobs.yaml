@@ -1,0 +1,13 @@
+workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "from job1"
+
+  job2:
+    runs-on: ubutnu-latest
+    steps:
+      - echo "hello from job2"
+      
