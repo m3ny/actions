@@ -23,4 +23,3 @@ runs:
     - id: greeting-step
       shell: bash
       run: echo "greeting=hello_${{ inputs.name }}" >> "$GITHUB_OUTPUT"
-      # This step sets the output 'greeting' to be used in the outputs section
