@@ -1,0 +1,15 @@
+name: First Workflow
+
+on:
+  pull_request:
+    
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Generate PR CodeName
+            uses: a-magdy/pr-codename-generator@main
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+        
